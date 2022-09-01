@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
+
+html,
+body {
+  /* @apply bg-slate-50; */
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-gradiente {
+  @apply bg-gradient-to-r from-teal-500 to-teal-400;
+}
+
+.container{
+  @apply max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl;
+  @apply px-5 lg:px-10;
+  @apply mx-auto;
+}
+
+.bg-image2{
+    background: url('https://apdash.themetags.com/assets/img/cta-bg.jpg') no-repeat center center / cover fixed;
+}
+
+.dot-circle li {
+  position: relative;
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.dot-circle li:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: 0;
+  top: 14px;
+  background: #6730e3;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: white;
+    @apply bg-gray-900
+  }
+}
